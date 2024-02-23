@@ -3,12 +3,11 @@ import Button from "@mui/material/Button";
 import "./SearchBox.css";
 import { useState } from "react";
 import { red } from "@mui/material/colors";
+import { API_KEY, API_URL } from "./API";
 
 export default function SearchBox({ updateInfo }) {
   let [city, setCity] = useState("");
   let [error, setError] = useState(false);
-  const API_URL = "https://api.openweathermap.org/data/2.5/weather";
-  const API_KEY = "a19523ef2692aca88a6bb3dc1bf4f174";
 
   let getWeatherInfo = async () => {
     try {
